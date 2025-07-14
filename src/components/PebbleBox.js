@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Pebble from './Pebble.js';
 
 export default function PebbleBox({ heap, selected, onToggle, heapIndex }) {
+  const count = heap.length;
   let gridCols = 'grid-cols-6';
   if (count === 4) gridCols = 'grid-cols-4';
-  let enabled = selected.heap === -1 || selected.heap === heapIndex;
+  const enabled = selected.heap === -1 || selected.heap === heapIndex;
 
   return (
     <div
@@ -22,18 +23,24 @@ export default function PebbleBox({ heap, selected, onToggle, heapIndex }) {
         backgroundPosition: 'center',
       }}
     >
-      <div className={`grid ${gridCols} place-items-center content-center items-stretch h-full gap-y-8`}>
-        {Array.from({ length: count }).map((_, pIdx) => (
-          <Pebble
-            key={pIdx}
+      <div className={`
+        grid ${gridCols}
+        place-items-center content-center items-stretch h-full gap-y-8
+      `}>
+        {heap.map((pIdx) => (
+          <div 
             className={`${
               pIdx >= 3 && count === 5 ? 'col-span-3' : 'col-span-2'
             }`}
-            heapIndex={heapIndex}
-            pebbleIndex={pIdx}
-            selected={selectedPebbles.includes(pIdx)}
-            onToggle={onToggle}
-          />
+            key={pIdx}
+          >
+            <Pebble
+              heapIndex={heapIndex}
+              pebbleIndex={pIdx}
+              selected={selected.pebbles.includes(pIdx)}
+              onToggle={onToggle}
+            />
+          </div>
         ))}
       </div>
     </div>

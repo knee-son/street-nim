@@ -11,16 +11,16 @@ export default function StreetNim() {
   const [heaps, setHeaps] = useState(initialHeaps);
   const [selected, setSelected] = useState({
     'heap': -1,
-    'pebble': [],
+    'pebbles': [],
   });
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [gameOver, setGameOver] = useState(false);
   const [message, setMessage] = useState('');
 
   const toggleSelect = (heapIndex, pebbleIndex) => {
+    console.log(heapIndex, pebbleIndex);
     if (gameOver) return;
-    console.log(selected);
-    const newSelected = selected.map(arr => [...arr]);
+    const newSelected = selected.pebbles.map(arr => [...arr]);
     console.log(newSelected);
     const already = newSelected[heapIndex].includes(pebbleIndex);
     if (already) {
@@ -79,7 +79,7 @@ export default function StreetNim() {
       <div className="mt-4 flex space-x-2">
         <button
           onClick={submitTurn}
-          disabled={gameOver || selected.every(arr => arr.length === 0)}
+          disabled={gameOver}
           className="px-4 py-2 bg-green-500 text-white rounded disabled:opacity-50"
         >
           Submit Turn
