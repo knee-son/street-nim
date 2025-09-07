@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Pebble from './Pebble.js';
 
-import box from '../images/box.png';
+import box from '../assets/images/box.png';
 
 export default function PebbleBox({ heap, selected, onToggle, heapIndex }) {
   const count = heap.length;
