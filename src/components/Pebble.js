@@ -4,7 +4,8 @@ export default function Pebble({ heapIndex, pebbleIndex, selected, onToggle }) {
   const imageIndex = useRef(Math.floor(Math.random() * 6));
   const rawRotation = Math.random() * 6;
   const rotation = useRef(Math.floor(rawRotation) * 30);
-  const imagePath = `/images/pebble_${imageIndex.current}.png`;
+
+  const imagePath = `${process.env.PUBLIC_URL}/images/pebble_${imageIndex.current}.png`;
 
   return (
     <div
@@ -13,7 +14,7 @@ export default function Pebble({ heapIndex, pebbleIndex, selected, onToggle }) {
     >
       <img
         src={imagePath}
-        alt={`Pebble ${imageIndex}`}
+        alt={`Pebble ${imageIndex.current}`}
         className={`
           w-[5vw] h-[5vw]
           min-w-[60px] min-h-[60px]

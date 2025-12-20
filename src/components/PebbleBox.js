@@ -17,7 +17,7 @@ export default function PebbleBox({ heap, selected, onToggle, heapIndex }) {
         p-4
       "
       style={{
-        backgroundImage: `url("/images/box.png")`,
+        backgroundImage: `url("${process.env.PUBLIC_URL}/images/box.png")`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -28,10 +28,9 @@ export default function PebbleBox({ heap, selected, onToggle, heapIndex }) {
         place-items-center content-center items-stretch h-full gap-y-8
       `}>
         {heap.map((pIdx) => (
-          <div 
-            className={`${
-              pIdx >= 3 && count === 5 ? 'col-span-3' : 'col-span-2'
-            }`}
+          <div
+            className={`${pIdx >= 3 && count === 5 ? 'col-span-3' : 'col-span-2'
+              }`}
             key={pIdx}
           >
             <Pebble
