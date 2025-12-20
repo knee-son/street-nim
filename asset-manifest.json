@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/street-nim/static/css/main.a717a1f1.css",
-    "main.js": "/street-nim/static/js/main.e3818710.js",
+    "main.css": "/street-nim/static/css/main.c34b6508.css",
+    "main.js": "/street-nim/static/js/main.d3e3ad01.js",
     "static/js/453.7f2b07aa.chunk.js": "/street-nim/static/js/453.7f2b07aa.chunk.js",
     "static/media/box.png": "/street-nim/static/media/box.3a919315c4abf6507ab1.png",
     "static/media/pebble_4.png": "/street-nim/static/media/pebble_4.128b57d4da9f69cdd1f2.png",
@@ -11,12 +11,12 @@
     "static/media/pebble_3.png": "/street-nim/static/media/pebble_3.8830b77fd9cd86962715.png",
     "static/media/pebble_0.png": "/street-nim/static/media/pebble_0.77fb4856aa7dac83041c.png",
     "index.html": "/street-nim/index.html",
-    "main.a717a1f1.css.map": "/street-nim/static/css/main.a717a1f1.css.map",
-    "main.e3818710.js.map": "/street-nim/static/js/main.e3818710.js.map",
+    "main.c34b6508.css.map": "/street-nim/static/css/main.c34b6508.css.map",
+    "main.d3e3ad01.js.map": "/street-nim/static/js/main.d3e3ad01.js.map",
     "453.7f2b07aa.chunk.js.map": "/street-nim/static/js/453.7f2b07aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a717a1f1.css",
-    "static/js/main.e3818710.js"
+    "static/css/main.c34b6508.css",
+    "static/js/main.d3e3ad01.js"
   ]
 }
