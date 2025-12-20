@@ -55,6 +55,10 @@ export default function StreetNim() {
     setMessage('');
   };
 
+  function canSubmit() {
+    return selected.heap >= 0 && !gameOver;
+  }
+
   return (
     <div className="p-4 max-w-4xl mx-auto flex flex-col items-center justify-center text-center">
       <h1 className="text-3xl font-bold mb-4">StreetNim!</h1>
@@ -79,8 +83,14 @@ export default function StreetNim() {
       <div className="mt-4 flex space-x-2">
         <button
           onClick={submitTurn}
-          disabled={gameOver}
-          className="px-4 py-2 bg-green-500 text-white rounded disabled:opacity-50"
+          disabled={canSubmit}
+          className="
+            px-4 py-2
+            bg-green-500
+            text-white rounded
+            disabled:opacity-50
+            disabled:cursor-pointer
+          "
         >
           Submit Turn
         </button>
