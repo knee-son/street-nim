@@ -22,7 +22,7 @@ export default function Pebble({ heapIndex, pebbleIndex, selected, onToggle }) {
       className='w-[80px] h-[80px] rounded-full cursor-pointer flex items-center justify-center'
     >
       <img
-        src={imagePath}
+        src={`url(${pebbleImages[pebbleIndex]})`}
         alt={`Pebble ${imageIndex.current}`}
         className={`
           w-[5vw] h-[5vw]

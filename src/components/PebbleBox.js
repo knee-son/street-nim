@@ -19,7 +19,7 @@ export default function PebbleBox({ heap, selected, onToggle, heapIndex }) {
         p-4
       "
       style={{
-        backgroundImage: `url("${process.env.PUBLIC_URL}/images/box.png")`,
+        backgroundImage: `url(${box})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
